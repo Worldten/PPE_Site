@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page d'acceuil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <!-- <link rel="stylesheet" href="/Bootstrap/bootstrap.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="Materialize/CSS/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="Index.html" class="brand-logo"><strong> &nbsp; AGENCE DU SOLEIL</strong></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="Biens.html">Biens</a></li>
+                    <li><a href="Messages.html">Messages</a></li>
+                    <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
+                    <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="Biens.html">Biens</a></li>
+            <li><a href="Messages.html">Messages</a></li>
+            <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
+            <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
+        </ul>
+    </header>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+    <script src="Materialize/JS/materialize.js"></script>
+    <div class="row s12">
+        <div class="col offset-s1 s10">
+            <div class="col s12 xl3 l3 center borderdiv">
+                ues
+            </div>
+            <div class="col offset-xl1 offset-l1 s12 xl3 l3 center borderdiv">
+                plop
+            </div>
+            <div class="col offset-xl1 offset-l1 s12 xl3 l3 center borderdiv">
+                aze
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
