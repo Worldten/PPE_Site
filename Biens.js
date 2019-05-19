@@ -16,11 +16,17 @@ $.getJSON("http://188.213.31.179:8082/biensAttente", function (object) {
         $('.attente').append('<div class="bien" href="' + id + '"><div class="name titre">' + name + '</div><div class="adresse titre">' + adresse + '</div><div class="prix titre">' + prix + '€</div></div>');
     })
 })
+
 $(document).ready(function () {
+    if (!localStorage.getItem('id')) window.location.replace("Login.html");
     $('.bien').click(function () {
+        console.log("clicked");
         $(this).each(function () {
             $.each(this.attributes, function () {
-                if (this.name === 'href') document.location.href = "Bien.html";
+                if (this.name === 'href') {
+                    console.log(this.value)
+                    document.location.href = "Bien.html?id=" + this.value;
+                }
             });
         });
     });
@@ -32,5 +38,6 @@ $(document).ready(function () {
         });
     });
 });
+
 
 

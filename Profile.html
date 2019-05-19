@@ -13,13 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-        });
-    </script>
-    <script src="Materialize/JS/materialize.js"></script>
+    <script src="Profile.js"></script>
 </head>
 
 <body>
@@ -32,7 +26,7 @@
                     <li><a href="Biens.html">Biens</a></li>
                     <li><a href="Messages.html">Messages</a></li>
                     <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
-                    <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
+                    <li><a href="Logout.html"></a></li>
                 </ul>
             </div>
         </nav>
@@ -41,18 +35,17 @@
             <li><a href="Biens.html">Biens</a></li>
             <li><a href="Messages.html">Messages</a></li>
             <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
-            <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
         </ul>
     </header>
-    <div id="inscription">
-        <form id="form">
-            <input type="text" id="prenom">
-            <input type="text" id="nom">
-            <input type="tel" id="tel">
-            <input type="text" id="mail">
-        </form>
-    </div>
+    <div id="profil">
 
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+    <script src="Materialize/JS/materialize.js"></script>
 </body>
 
 </html>
