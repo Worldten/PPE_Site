@@ -1,4 +1,4 @@
-$.getJSON(`api.thomaszimmermann.fr/user?id=` + localStorage.getItem('id') + ``, function (object) {
+$.getJSON(`https://api.thomaszimmermann.fr/user?id=` + localStorage.getItem('id') + ``, function (object) {
     $.each(object.data, function (index, value) {
         let name = value.prenom_personne;
         let lname = value.nom_personne;

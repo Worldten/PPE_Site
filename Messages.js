@@ -1,4 +1,4 @@
-$.getJSON("http://188.213.31.179:8082/messages", function (object) {
+$.getJSON("https://api.thomaszimmermann.fr/messages", function (object) {
     $.each(object.data, function (index, value) {
         console.log(value)
         let texte = value.texte_message;
