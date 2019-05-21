@@ -1,4 +1,4 @@
-$.getJSON("http://api.thomaszimmermann.fr/biens", function (object) {
+$.getJSON("https://api.thomaszimmermann.fr/biens", function (object) {
     $.each(object.data, function (index, value) {
         let name = value.nom_bien;
         let adresse = value.adresse1_bien;
@@ -7,7 +7,7 @@ $.getJSON("http://api.thomaszimmermann.fr/biens", function (object) {
         $('.Biens').append('<div class="bien" href="' + id + '"><div class="name titre">' + name + '</div><div class="adresse titre">' + adresse + '</div><div class="prix titre">' + prix + '€</div></div>');
     })
 })
-$.getJSON("http://api.thomaszimmermann.fr/biensAttente", function (object) {
+$.getJSON("https://api.thomaszimmermann.fr/biensAttente", function (object) {
     $.each(object.data, function (index, value) {
         let name = value.nom_bien;
         let adresse = value.adresse1_bien;
