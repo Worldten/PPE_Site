@@ -1,4 +1,4 @@
-$.getJSON(`http://188.213.31.179:8082/user?id=` + localStorage.getItem('id') + ``, function (object) {
+$.getJSON(`http://api.thomaszimmermann.fr/user?id=` + localStorage.getItem('id') + ``, function (object) {
     $.each(object.data, function (index, value) {
         let name = value.prenom_personne;
         let lname = value.nom_personne;
