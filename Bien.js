@@ -23,8 +23,7 @@ $.getJSON(`https://api.thomaszimmermann.fr/bien?id=` + GET.id + ``, function (ob
                 $.each(object.data, function (index, value) {
                     let m_name = value.texte_message;
                     let m_id = value.ref_personne;
-                    console.log(m_id);
-                    $.getJSON(`api.thomaszimmermann.fr/user?id=` + m_id, function (object) {
+                    $.getJSON(`https://api.thomaszimmermann.fr/user?id=` + m_id, function (object) {
                         let u_name = object.data[0].prenom_personne;
                         $('.msg').append('<div class="message">' + m_name + " " + u_name + '</div>')
                     })

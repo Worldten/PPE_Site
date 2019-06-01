@@ -1,0 +1,17 @@
+#myForm{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 3%;
+}
+
+#submit{
+    padding: 1em;
+    border: solid black 0em;
+    border-radius: 100px;
+    background-color: #472747;
+    color: white;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    font-weight: bold;
+}

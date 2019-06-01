@@ -20,6 +20,7 @@
         });
     </script>
     <script src="Materialize/JS/materialize.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="Materialize/CSS/ajout.css">
 </head>
 
 <body>
@@ -44,15 +45,35 @@
             <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
         </ul>
     </header>
-    <div id="inscription">
-        <form id="form">
-            <input type="text" id="prenom">
-            <input type="text" id="nom">
-            <input type="tel" id="tel">
-            <input type="text" id="mail">
+    <div id="inscription" class="col xl6 l6 m8 s10 offset-s1 offset-m2 offset-l3 offset-xl3">
+        <form id="myForm">
+            <input type="text" id="prenom" placeholder="Prenom">
+            <input type="text" id="nom" placeholder="Nom">
+            <input type="tel" id="tel" placeholder="Telephone">
+            <input type="text" id="mail" placeholder="E-Mail">
+            <input type="password" id="mdp" placeholder="Mot de passe">
+            <input type="submit" value="AJOUTER UN ADMINISTRATEUR" id="submit">
         </form>
     </div>
+    <script>
+        window.addEventListener("load", function () {
+            function sendData() {
+                $.post('https://api.thomaszimmermann.fr/add_user?add1=Agence&tel=' + $("#tel").val() + '&prenom=' + $("#prenom").val() + '&mail=' + $("#mail").val() + '&adresse2=Agence&cp=69005&nom=' + $("#nom").val() + '&mdp=' + $("#mdp").val() + '&admin=1', function (status) {
+                    window.location = "index.html";
+                })
+            }
+            var form = document.getElementById("myForm");
 
+            // … et prenez en charge l'événement submit.
+            form.addEventListener("submit", function (event) {
+                console.log("submit : " + $("#prenom").val());
+
+                event.preventDefault();
+
+                sendData();
+            });
+        });
+    </script>
 </body>
 
 </html>
