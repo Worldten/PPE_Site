@@ -55,3 +55,16 @@
     font-weight: bold;
     border-radius: 12px;
 }
+
+#new_contract{
+    text-align: center;
+    background-color: #472747;
+    border :0px;
+    color: white;
+    padding: .8em;
+    font-weight: bold;
+    border-radius: 12px;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+}

@@ -31,7 +31,6 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="Biens.html">Biens</a></li>
                     <li><a href="Messages.html">Messages</a></li>
-                    <li><a href="Contrats.html">Contrats</a></li>
                     <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
                     <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
                 </ul>
@@ -41,34 +40,39 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="Biens.html">Biens</a></li>
             <li><a href="Messages.html">Messages</a></li>
-            <li><a href="Contrats.html">Contrats</a></li>
             <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
             <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
         </ul>
     </header>
     <div id="inscription" class="col xl6 l6 m8 s10 offset-s1 offset-m2 offset-l3 offset-xl3">
         <form id="myForm">
-            <input type="text" id="prenom" placeholder="Prenom">
-            <input type="text" id="nom" placeholder="Nom">
-            <input type="tel" id="tel" placeholder="Telephone">
-            <input type="text" id="mail" placeholder="E-Mail">
-            <input type="password" id="mdp" placeholder="Mot de passe">
-            <input type="submit" value="AJOUTER UN ADMINISTRATEUR" id="submit">
+            Date du contrat :<input type="date" id="contrat" placeholder="Prenom">
+            <br><br>
+            Date d'entree :<input type="date" id="entree" placeholder="Nom">
+            <br><br>
+            Date de sortie :<input type="date" id="sortie" placeholder="Telephone">
+            <br><br>
+            Etat du paiement :<select id="paie">
+                <option value="En attente">En attente</option>
+                <option value="Payé">Payé</option>
+            </select>
+            <br><br>
+            Reference du bien :<input type="text" id="bien" placeholder="Ex : 8 , 9 ,10 ..."><br><br>
+            Reference du client :<input type="text" id="client" placeholder="Ex : 8 , 9 ,10 ...">
+            <input type="submit" value="AJOUTER UN CONTRAT" id="submit">
         </form>
     </div>
     <script>
         window.addEventListener("load", function () {
             function sendData() {
-                $.post('https://api.thomaszimmermann.fr/add_user?tel=' + $("#tel").val() + '&prenom=' + $("#prenom").val() + '&mail=' + $("#mail").val() + '&nom=' + $("#nom").val() + '&mdp=' + $("#mdp").val() + '&admin=1', function (status) {
-                    window.location = "index.html";
+                $.post('https://api.thomaszimmermann.fr/add_location?contrat=' + $("#contrat").val() + '&entree=' + $("#entree").val() + '&sortie=' + $("#sortie").val() + '&paiement=' + $("#paie").val() + '&id_bien=' + $("#bien").val() + '&id_personne=' + $("#client").val() + '', function (status) {
+                    window.location = "Contrats.html";
                 })
             }
             var form = document.getElementById("myForm");
 
             // … et prenez en charge l'événement submit.
             form.addEventListener("submit", function (event) {
-                console.log("submit : " + $("#prenom").val());
-
                 event.preventDefault();
 
                 sendData();
