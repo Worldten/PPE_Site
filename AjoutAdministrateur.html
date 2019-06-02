@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page d'acceuil</title>
+    <title>Ajout d'administrateur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <!-- <link rel="stylesheet" href="/Bootstrap/bootstrap.css"
@@ -13,12 +13,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
         });
     </script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="Materialize/JS/materialize.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="Materialize/CSS/ajout.css">
 </head>
@@ -27,7 +27,6 @@
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="Index.html" class="brand-logo"><strong> &nbsp; AGENCE DU SOLEIL</strong></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="Biens.html">Biens</a></li>
@@ -58,7 +57,7 @@
     <script>
         window.addEventListener("load", function () {
             function sendData() {
-                $.post('https://api.thomaszimmermann.fr/add_user?add1=Agence&tel=' + $("#tel").val() + '&prenom=' + $("#prenom").val() + '&mail=' + $("#mail").val() + '&adresse2=Agence&cp=69005&nom=' + $("#nom").val() + '&mdp=' + $("#mdp").val() + '&admin=1', function (status) {
+                $.post('https://api.thomaszimmermann.fr/add_user?tel=' + $("#tel").val() + '&prenom=' + $("#prenom").val() + '&mail=' + $("#mail").val() + '&nom=' + $("#nom").val() + '&mdp=' + $("#mdp").val() + '&admin=1', function (status) {
                     window.location = "index.html";
                 })
             }
@@ -72,6 +71,7 @@
 
                 sendData();
             });
+            if (!localStorage.getItem('id')) window.location.replace("Login.html");
         });
     </script>
 </body>

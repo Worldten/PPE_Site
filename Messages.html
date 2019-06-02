@@ -4,25 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page d'acceuil</title>
+    <title>Messages</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Materialize/CSS/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
     <script src="Messages.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="Messages.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="Index.html" class="brand-logo"><strong> &nbsp; AGENCE DU SOLEIL</strong></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="Biens.html">Biens</a></li>
                     <li><a href="Messages.html">Messages</a></li>
-                    <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
+                    <li><a href="AjoutAdministrateur.html">Ajouter un administrateur</a></li>
                     <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
                 </ul>
             </div>
@@ -31,12 +32,14 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="Biens.html">Biens</a></li>
             <li><a href="Messages.html">Messages</a></li>
-            <li><a href="AjoutAdministrateur.html">Ajouter un utilisateur</a></li>
+            <li><a href="AjoutAdministrateur.html">Ajouter un administrateur</a></li>
             <li><a href="Logout.html"><i class="material-icons">account_circle</i></a></li>
         </ul>
     </header>
-    <div class="Messages">
+    <div class="col offset-m1 offset-l1 offset-xl1 m10 l10 xl10">
+        <div class="Messages col offset-m1 offset-l1 offset-xl6 m6 l6 xl6">
 
+        </div>
     </div>
     <script>
         $(document).ready(function () {

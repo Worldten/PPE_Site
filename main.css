@@ -1,10 +1,26 @@
 .bien{
     border: 1px black solid;
-    border-radius: 25px;
+    border-radius: 12px;
     margin-top: 2%;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-bottom: 1%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+.image{
+    width: 20em;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.lien_bien{
+    font-weight: bold;
+    border: 0.5px black solid;
+    padding: .3em;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px 0px #656565;
 }
 
 .titre{
@@ -15,4 +31,27 @@
 
 .refuser .accepter{
     padding: 5em;
+}
+
+#validation {
+    text-align: center;
+}
+
+#refuser{
+    background-color: red;
+    border :0px;
+    color: white;
+    padding: .8em;
+    font-weight: bold;
+    margin-top: .5em;
+    border-radius: 12px;
+}
+
+#accepter{
+    background-color: green;
+    border: 0px;
+    color: white;
+    padding: .8em;
+    font-weight: bold;
+    border-radius: 12px;
 }
